@@ -1,48 +1,48 @@
-# LGcanada-Devops-project
-DevOps automation project using Terraform, Jenkins, Ansible, and AWS for infrastructure provisioning and CI/CD pipeline implementation.
-
 # LG Canada DevOps Project
 
 ## Project Overview
 
-This project demonstrates a complete DevOps automation workflow using:
+This project demonstrates a complete DevOps automation workflow using Terraform, Jenkins, Ansible, AWS, and GitHub.
 
-- Terraform
-- Jenkins
-- Ansible
-- AWS EC2
-- GitHub
+The infrastructure is provisioned using Terraform, server configuration is managed using Ansible, and CI/CD automation is performed using Jenkins pipelines.
 
-The infrastructure is provisioned using Terraform, configured using Ansible, and automated through Jenkins CI/CD pipelines.
+This project was created to demonstrate practical DevOps skills including Infrastructure as Code (IaC), CI/CD automation, cloud provisioning, Linux administration, and configuration management.
 
 ---
 
-# Tools & Technologies Used
+## Technologies & Tools Used
 
-| Tool | Purpose |
-|------|----------|
-| Terraform | Infrastructure as Code |
-| Jenkins | CI/CD Automation |
-| Ansible | Configuration Management |
-| AWS EC2 | Cloud Infrastructure |
-| GitHub | Version Control |
-| Ubuntu Linux | Operating System |
-
----
-
-# AWS Resources Used
-
-- VPC
-- Public Subnet
-- Internet Gateway
-- Route Table
-- Security Group
-- EC2 Instance
-- EBS Volume
+| Tool / Technology | Purpose                              |
+| ----------------- | ------------------------------------ |
+| Terraform         | Infrastructure as Code               |
+| Jenkins           | CI/CD Pipeline Automation            |
+| Ansible           | Configuration Management             |
+| AWS EC2           | Cloud Compute Service                |
+| AWS VPC           | Networking Infrastructure            |
+| GitHub            | Version Control & Repository Hosting |
+| Ubuntu Linux      | Operating System                     |
+| Git               | Source Code Management               |
 
 ---
 
-# Jenkins Pipeline Stages
+## AWS Resources Provisioned
+
+The following AWS infrastructure components were created using Terraform:
+
+* VPC
+* Public Subnet
+* Internet Gateway
+* Route Table
+* Route Table Association
+* Security Group
+* EC2 Instance
+* SSH Key Pair
+
+---
+
+## CI/CD Pipeline Stages
+
+The Jenkins pipeline automates infrastructure deployment using the following stages:
 
 1. Terraform Init
 2. Terraform Validate
@@ -51,51 +51,102 @@ The infrastructure is provisioned using Terraform, configured using Ansible, and
 
 ---
 
-# Ansible Configuration Tasks
+## Ansible Configuration Tasks
 
-- Install Git
-- Install Docker
-- Install Java
-- Install Nginx
-- Create Developer User
+After infrastructure provisioning, Ansible performs server configuration tasks including:
+
+* Installing Git
+* Installing Docker
+* Installing Java
+* Installing Nginx
+* Creating a Developer User
+* Updating Ubuntu Packages
 
 ---
 
-# CI/CD Workflow
+## Project Workflow
 
 1. Developer pushes code to GitHub
-2. Jenkins triggers pipeline
+2. Jenkins pipeline is triggered
 3. Terraform provisions AWS infrastructure
-4. Ansible configures EC2 instance
-5. Deployment completes automatically
+4. EC2 instance is created automatically
+5. Ansible configures the server environment
+6. Deployment process completes successfully
 
 ---
 
-# Project Architecture
+## Project Architecture
 
 GitHub → Jenkins → Terraform → AWS Infrastructure → Ansible Configuration
 
 ---
 
-# Repository Structure
+## Repository Structure
 
-```bash
-terraform/
-├── main.tf
-├── provider.tf
-├── variables.tf
-├── terraform.tfvars
-├── outputs.tf
-└── ansible-playbook.yml
-
-Jenkinsfile
-README.md
-docs/
-screenshots/
+```text
+LGcanada-Devops-project/
+│
+├── terraform/
+│   ├── main.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   ├── outputs.tf
+│   └── ansible-playbook.yml
+│
+├── Jenkinsfile
+├── README.md
+├── .gitignore
+├── LICENSE
+│
+├── docs/
+└── screenshots/
 ```
 
 ---
 
-# Author
+## Key DevOps Concepts Demonstrated
 
-Devang Mehta
+* Infrastructure as Code (IaC)
+* Continuous Integration / Continuous Deployment (CI/CD)
+* Cloud Infrastructure Automation
+* Configuration Management
+* AWS Networking
+* Linux Server Administration
+* Git Version Control
+* Jenkins Pipeline Automation
+
+---
+
+## Security Best Practices
+
+Sensitive files are excluded from GitHub using `.gitignore`, including:
+
+* `.terraform/`
+* `terraform.tfstate`
+* SSH private keys
+* `.pem` files
+
+---
+
+## Future Improvements
+
+* Add Docker container deployment
+* Integrate Kubernetes
+* Configure Jenkins Webhooks
+* Implement Terraform Remote Backend
+* Add Monitoring & Logging
+
+---
+
+## Author
+
+**Devang Mehta**
+
+DevOps & Cloud Automation Project
+
+---
+
+## License
+
+This project is licensed under the MIT License.
