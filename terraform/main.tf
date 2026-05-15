@@ -108,8 +108,9 @@ resource "aws_instance" "developer_vm" {
       "sudo apt update -y",
       "sudo apt install python3 -y"
     ]
-  provisioner "local-exec" {
-  command = "ansible-playbook -i '${self.public_ip},' --private-key /var/lib/jenkins/.ssh/id_rsa --ssh-common-args='-o StrictHostKeyChecking=no' ansible-playbook.yml"
   }
-}
+
+  provisioner "local-exec" {
+    command = "ansible-playbook -i '${self.public_ip},' --private-key /var/lib/jenkins/.ssh/id_rsa --ssh-common-args='-o StrictHostKeyChecking=no' ansible-playbook.yml"
+  }
 }
