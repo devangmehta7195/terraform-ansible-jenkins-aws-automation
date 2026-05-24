@@ -26,4 +26,4 @@
 
 ### Jenkins CI/CD Pipeline Execution
 
-![Jenkins Pipeline](jenkins-pipeline-build.png)
+![Jenkins Pipeline](jenkins-pipeline-create-build.png)
