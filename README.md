@@ -81,26 +81,34 @@ GitHub → Jenkins → Terraform → AWS Infrastructure → Ansible Configuratio
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
 
-```text
+```bash
 LGcanada-Devops-project/
 │
 ├── terraform/
+│   ├── ansible-playbook.yml
 │   ├── main.tf
-│   ├── provider.tf
-│   ├── variables.tf
-│   ├── terraform.tfvars
 │   ├── outputs.tf
-│   └── ansible-playbook.yml
+│   ├── provider.tf
+│   ├── terraform.tfvars
+│   └── variables.tf
 │
-├── Jenkinsfile
-├── README.md
+├── screenshots/
+│   ├── README.md
+│   ├── ansible-server-configuration.png
+│   ├── aws-resources-created.png
+│   ├── ec2-instance-running.png
+│   ├── jenkins-dashboard.png
+│   ├── jenkins-pipeline-create-build.png
+│   ├── project-architecture.png
+│   └── terraform-deployment.png
+│
 ├── .gitignore
+├── Jenkinsfile
 ├── LICENSE
-│
-├── docs/
-└── screenshots/
+└── README.md
+```
 ```
 
 ---
